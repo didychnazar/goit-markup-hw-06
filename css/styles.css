@@ -1017,7 +1017,7 @@ input::placeholder {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding: 96px 92px;
+    padding: 96px 108px;
   }
   .footer-title {
     max-width: 264px;
