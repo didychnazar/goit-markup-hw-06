@@ -362,6 +362,7 @@ button {
   flex-direction: column;
   gap: 24px;
   padding-bottom: 48px;
+  font-style: normal;
 }
 
 .contacts-link-mobile {
@@ -415,11 +416,25 @@ button {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/background-image.mobile.jpg);
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin: 0 auto;
   max-width: 100%;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .main-banner {
+    background-color: #2e2f42;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/background-mobile-2x.jpg);
+  }
 }
 
 .banner-container {
@@ -480,6 +495,19 @@ button {
       url(../images/background-tablet.jpg);
   }
 
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .main-banner {
+      background-color: #2e2f42;
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/background-tablet-2x.jpg);
+    }
+  }
+
   .main-logo {
     font-weight: 700;
     font-size: 56px;
@@ -498,7 +526,20 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office.jpg);
+      url(../images/background.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .main-banner {
+      background-color: #2e2f42;
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/background-2x.jpg);
+    }
   }
 
   .main-logo {
@@ -524,7 +565,7 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .feature-contents {
@@ -620,10 +661,6 @@ button {
   padding-top: 96px;
 }
 
-.team-logo {
-  margin-bottom: 72px;
-}
-
 .team-box {
   padding: 32px 0%;
 }
@@ -639,11 +676,14 @@ button {
   text-transform: capitalize;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 72px;
 }
 
 .team-list {
-  align-items: center;
-  background: #f4f4fd;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 72px;
 }
 
 .team {
@@ -661,6 +701,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 96px 0;
 }
 
 .team-title {
@@ -671,7 +712,7 @@ button {
   text-align: center;
   color: #2e2f42;
   background-color: #ffffff;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .team-content {
@@ -682,6 +723,7 @@ button {
   text-align: center;
   color: #434455;
   background-color: #fff;
+  margin-bottom: 8px;
 }
 
 .team-item {
@@ -701,7 +743,6 @@ button {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: #fff;
-  margin-bottom: 72px;
 }
 
 .team-icons {
@@ -709,7 +750,6 @@ button {
   align-items: center;
   justify-content: center;
   gap: 24px;
-  margin-top: 8px;
 }
 
 .social-icons {
@@ -810,7 +850,6 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
-  margin-top: 72px;
 }
 
 .portfolio-item {
@@ -872,6 +911,7 @@ button {
 
 .page-footer {
   background-color: #2e2f42;
+  padding: 96px 0;
 }
 
 .footer-item {
@@ -1003,20 +1043,18 @@ input::placeholder {
   .footer-order-input {
     width: 264px;
   }
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-  .footer-title {
-    padding-top: 96px;
-    padding-bottom: 72px;
-  }
-  .footer-social {
-    padding-bottom: 72px;
+    gap: 72px;
   }
   .footer-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
-    padding-bottom: 96px;
   }
 }
 
@@ -1025,19 +1063,21 @@ input::placeholder {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding: 96px 108px;
+    max-width: 584px;
+    gap: 72px 24px;
   }
   .footer-title {
     max-width: 264px;
-    margin-right: 24px;
-    margin-bottom: 72px;
   }
   .footer-form {
     display: flex;
     flex-wrap: wrap;
+    gap: 24px;
   }
+
   .footer-order-input {
-    margin-right: 24px;
+    display: block;
+    gap: 24px;
   }
 }
 
@@ -1070,7 +1110,6 @@ input::placeholder {
     display: flex;
   }
 }
-
 /* Modalka */
 
 .backdrop {
